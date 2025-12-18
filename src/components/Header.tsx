@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Search, Heart, ShoppingBag, ChevronDown, Menu, X } from "lucide-react";
-import logoImage from "@/assets/logo.png";
+import logoImage from "@/assets/ElveraLogoFinal.png";
 import usFlag from "@/assets/us-flag.png";
 import bellIcon from "@/assets/icon-bell.png";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
