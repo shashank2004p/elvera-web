@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Search, Heart, ShoppingBag, ChevronDown, Menu, X } from "lucide-react";
 import logoImage from "@/assets/ElveraLogoFinal.png";
 import usFlag from "@/assets/us-flag.png";
+import elveraLogoText from "@/assets/ElveraLogoFinalblack.png";
+
 import bellIcon from "@/assets/icon-bell.png";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -72,9 +74,9 @@ const Header = () => {
         <div className="absolute left-1/2 transform -translate-x-1/2">
           <a href="/" className="block">
             <img 
-              src={logoImage} 
+              src={elveraLogoText} 
               alt="ELVERA Jewels" 
-              className="h-auto w-[120px] sm:w-[150px] md:w-[180px] lg:w-[200px]" 
+              className="h-auto w-[120px] sm:w-[150px] md:w-[180px] lg:w-[200px] " 
             />
           </a>
         </div>
