@@ -1,32 +1,26 @@
 import { ArrowRight } from "lucide-react";
 import saleModel from "@/assets/sale-model.png";
-import saleLeavesBg from "@/assets/sale-leaves-bg.png";
+import saleLeavesBg from "@/assets/image 73.png";
 
 const SeasonSaleSection = () => {
   return (
-    <section className="w-full px-3 sm:px-4 md:px-8 lg:px-16 py-8 sm:py-10 md:py-12">
+    <section className="w-full px-3 sm:px-4 md:px-8 lg:px-16 py-6 sm:py-8 md:py-10">
       {/* Constrain max width for better laptop / large-screen layouts */}
       <div className="max-w-[1400px] mx-auto">
-        {/* Use row layout from md upwards so laptop-ish widths (≈900–1200px) see both panels side by side */}
-        <div className="flex flex-col md:flex-row h-auto md:min-h-[410px] shadow-lg">
+        {/* Card wrapper to more closely match Figma (single card with two panels) */}
+        <div className="flex flex-col md:flex-row h-auto md:min-h-[360px] rounded-md shadow-lg overflow-hidden bg-white">
           {/* Left Banner - Large */}
-          <div className="relative flex-1 bg-[#F6F4F1] overflow-hidden min-h-[520px] sm:min-h-[560px] md:min-h-[600px]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-x-[-1]"
-            style={{
-              backgroundImage: `url(${saleLeavesBg})`,
-            }}
-          />
-          <div className="absolute right-0 top-0 w-[55%] h-full hidden sm:block">
-            <img
-              src={saleLeavesBg}
-              alt=""
-              className="w-full h-full object-cover object-right-top opacity-80 scale-x-[-1]"
+          <div className="relative flex-1 md:basis-[65%] bg-[#F6F4F1] overflow-hidden min-h-[420px] sm:min-h-[440px] md:min-h-[460px]">
+            {/* Single background image for the marble + leaves */}
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-x-[1]"
+              style={{
+                backgroundImage: `url(${saleLeavesBg})`,
+              }}
             />
-          </div>
 
             {/* Model Image - positioned on left to match Figma (tall, cropped, aligned to top) */}
-            <div className="absolute left-0 top-0 bottom-0 w-[40%] sm:w-[42%] lg:w-[360px]">
+            <div className="absolute left-0 top-0 bottom-0 w-[38%] sm:w-[40%] lg:w-[340px]">
               <img
                 src={saleModel}
                 alt="Model wearing jewelry"
@@ -35,7 +29,7 @@ const SeasonSaleSection = () => {
             </div>
 
             {/* Content - positioned in center-right area */}
-            <div className="relative z-10 ml-auto mr-4 sm:mr-6 md:mr-8 lg:mr-16 max-w-[90%] sm:max-w-[420px] h-full flex flex-col justify-center py-8 sm:py-10 md:py-12 lg:py-0 pl-[42%] sm:pl-[45%] lg:pl-0">
+            <div className="relative z-10 ml-auto mr-6 sm:mr-8 md:mr-10 lg:mr-16 max-w-[90%] sm:max-w-[420px] h-full flex flex-col justify-center py-10 sm:py-12 md:py-14 lg:py-0 pl-[40%] sm:pl-[42%] lg:pl-0">
               <p className="text-[9px] sm:text-[10px] lg:text-[11px] tracking-[0.22em] text-[#3D3027] mb-3 sm:mb-4 uppercase font-medium">
                 END OF THE SEASON SALE
               </p>
@@ -61,7 +55,7 @@ const SeasonSaleSection = () => {
           </div>
 
           {/* Right Banner - Brown */}
-          <div className="bg-[#4A3629] w-full md:w-[320px] lg:w-[360px] flex flex-col justify-center items-center px-6 sm:px-8 lg:px-12 py-8 sm:py-10 md:py-12 lg:py-8 text-center">
+          <div className="bg-[#4A3629] w-full md:basis-[35%] md:w-auto lg:w-[360px] flex flex-col justify-center items-center px-6 sm:px-8 lg:px-12 py-8 sm:py-10 md:py-12 lg:py-8 text-center">
             <p className="text-[9px] sm:text-[10px] lg:text-[11px] tracking-[0.22em] text-white/90 mb-4 sm:mb-5 md:mb-6 uppercase font-medium border-b border-white/30 pb-2 sm:pb-3 px-2 sm:px-4">
               END OF THE SEASON SALE
             </p>
