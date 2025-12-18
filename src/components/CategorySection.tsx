@@ -25,7 +25,8 @@ const CategorySection = () => {
         </div>
 
         {/* Desktop: Overlapping Layout */}
-        <div className="hidden lg:block relative h-[500px] xl:h-[600px] 2xl:h-[700px]">
+        {/* Use min-height so content can grow on smaller laptop viewports without clipping */}
+        <div className="hidden lg:block relative min-h-[500px] xl:min-h-[600px] 2xl:min-h-[700px]">
           {/* LEFT FAR */}
           <div className="absolute left-[2%] top-1/2 -translate-y-1/2 w-[250px] xl:w-[330px] 2xl:w-[393px] h-[310px] xl:h-[410px] 2xl:h-[486px] z-[1] overflow-hidden">
             <img src={categoryNecklace} className="w-full h-full object-cover" />
@@ -67,19 +68,19 @@ export default CategorySection;
 /* Label Component (inline, same file) */
 /* ---------------------------------- */
 
-const CategoryCard = ({ 
-  src, 
-  text, 
+const CategoryCard = ({
+  src,
+  text,
   isMain = false,
-  className = "" 
-}: { 
-  src: string; 
-  text: string; 
+  className = ""
+}: {
+  src: string;
+  text: string;
   isMain?: boolean;
   className?: string;
 }) => {
   return (
-    <div className={`relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden ${className}`}>
+    <div className={`relative aspect-square w-full overflow-hidden ${className}`}>
       <img src={src} className="w-full h-full object-cover" />
       <Label text={text} big={isMain} />
     </div>
